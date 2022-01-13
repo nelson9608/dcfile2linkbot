@@ -113,9 +113,10 @@ async def start(b, m):
         await StreamBot.send_photo(
             chat_id=m.chat.id,
             photo ="https://user-images.githubusercontent.com/88939380/137127129-a86fc939-2931-4c66-b6f6-b57711a9eab7.png",
-            caption ="""Hi !
-I am Telegram File to Link Generator Bot with Channel support.
-Send me any file and get a direct download link and streamable link.!""",
+            caption ="""Oii! I am Telegram File to Link Generator Bot with Channel Support 🦋.
+Send me any file and get a direct download link and streamable link.!
+
+⚠️ First Login Then Send File. Click LOGIN Button to login 👇""",
             parse_mode="html",
             reply_markup=buttonz)
                                                                                        
@@ -128,7 +129,7 @@ Send me any file and get a direct download link and streamable link.!""",
                 if user.status == "kicked":
                     await b.send_message(
                         chat_id=m.chat.id,
-                        text="**Sᴏʀʀʏ Sɪʀ, Yᴏᴜ ᴀʀᴇ Bᴀɴɴᴇᴅ ᴛᴏ ᴜsᴇ ᴍᴇ. Qᴜɪᴄᴋʟʏ ᴄᴏɴᴛᴀᴄᴛ** @codexmaniachat",
+                        text="**Sᴏʀʀʏ Sɪʀ, Yᴏᴜ ᴀʀᴇ Bᴀɴɴᴇᴅ ᴛᴏ ᴜsᴇ ᴍᴇ. Qᴜɪᴄᴋʟʏ ᴄᴏɴᴛᴀᴄᴛ** @Dcstreambot",
                         parse_mode="markdown",
                         disable_web_page_preview=True
                     )
@@ -155,7 +156,7 @@ Send me any file and get a direct download link and streamable link.!""",
             except Exception:
                 await b.send_message(
                     chat_id=m.chat.id,
-                    text="**Sᴏᴍᴇᴛʜɪɴɢ ᴡᴇɴᴛ Wʀᴏɴɢ. Cᴏɴᴛᴀᴄᴛ ᴍᴇ** [ADARSH GOEL](https://t.me/codexmaniabot)",
+                    text="**Sᴏᴍᴇᴛʜɪɴɢ ᴡᴇɴᴛ Wʀᴏɴɢ. Cᴏɴᴛᴀᴄᴛ ᴍᴇ** [Dcstreambot](https://t.me/Dcstreambot)",
                     parse_mode="markdown",
                     disable_web_page_preview=True)
                 return
@@ -196,14 +197,14 @@ Send me any file and get a direct download link and streamable link.!""",
        
 
         msg_text ="""
-<i><u>𝗬𝗼𝘂𝗿 𝗟𝗶𝗻𝗸 𝗚𝗲𝗻𝗲𝗿𝗮𝘁𝗲𝗱 !</u></i>
+<i><u>Your Link is Generated!</u></i>
 <b>📂 Fɪʟᴇ ɴᴀᴍᴇ :</b> <i>{}</i>
 
 <b>📦 Fɪʟᴇ ꜱɪᴢᴇ :</b> <i>{}</i>
 
 <b>📥 Dᴏᴡɴʟᴏᴀᴅ :</b> <i>{}</i>
 
-<b> 🖥WATCH  :</b> <i>{}</i>
+<b>🖥 WATCH  :</b> <i>{}</i>
 
 <b>🚸 Nᴏᴛᴇ : LINK WON'T EXPIRE TILL I DELETE</b>
 """
@@ -211,12 +212,12 @@ Send me any file and get a direct download link and streamable link.!""",
         await m.reply_text(
             text=msg_text.format(file_name, file_size, online_link, stream_link),
             parse_mode="HTML",
-            reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🖥STREAM", url=stream_link), #Stream Link
-                                                InlineKeyboardButton('Dᴏᴡɴʟᴏᴀᴅ📥', url=online_link)]]) #Download Link
+            reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🖥 STREAM", url=stream_link), #Stream Link
+                                                InlineKeyboardButton('Dᴏᴡɴʟᴏᴀᴅ 📥', url=online_link)]]) #Download Link
         )
 
 
-@StreamBot.on_message(filters.regex('help📚') & filters.private & ~filters.edited)
+@StreamBot.on_message(filters.regex('HELP') & filters.private & ~filters.edited)
 async def help_handler(bot, message):
     if not await db.is_user_exist(message.from_user.id):
         await db.add_user(message.from_user.id)
@@ -253,19 +254,19 @@ async def help_handler(bot, message):
         except Exception:
             await bot.send_message(
                 chat_id=message.chat.id,
-                text="__Sᴏᴍᴇᴛʜɪɴɢ ᴡᴇɴᴛ Wʀᴏɴɢ. Cᴏɴᴛᴀᴄᴛ ᴍᴇ__ [ADARSH GOEL](https://t.me/codexmaniachat).",
+                text="__Sᴏᴍᴇᴛʜɪɴɢ ᴡᴇɴᴛ Wʀᴏɴɢ. Cᴏɴᴛᴀᴄᴛ ᴍᴇ__ [Dcstreambot](https://t.me/Dcstreambot).",
                 parse_mode="markdown",
                 disable_web_page_preview=True)
             return
     await message.reply_text(
         text="""<b> Send me any file or video i will give you streamable link and download link.</b>\n
-<b> I also support Channels, add me to you Channel and send any media files and see miracle✨ also send /list to know all commands""",
+<b> I also support Channels, add me to you Channel and send any media files and see miracle✨ also send /list to know all Commands. ⚠️ First Login Then Send File. Click LOGIN Button to login 👇""",
         parse_mode="HTML",
         disable_web_page_preview=True,
         reply_markup=InlineKeyboardMarkup(
             [
-                [InlineKeyboardButton("💁‍♂️ DEV", url="https://t.me/codexmania")],
-                [InlineKeyboardButton("💥 FOLLOW", url="https://GitHub.com/code-x-mania")]
+                [InlineKeyboardButton("DEV", url="https://t.me/dcbotsa")],
+                [InlineKeyboardButton("FOLLOW", url="https://t.me/Dcstreambot")]
             ]
         )
     )
