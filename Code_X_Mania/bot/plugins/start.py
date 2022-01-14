@@ -91,7 +91,7 @@ async def start(b, m):
             except UserNotParticipant:
                  await StreamBot.send_photo(
                     chat_id=m.chat.id,
-                    photo="https://i.ibb.co/NKXgXD4/vlmnwosn-0.png",
+                    photo="https://telegra.ph/file/ebab36e43c1c7b4246322.jpg",
                     caption="<i>𝙹𝙾𝙸𝙽 CHANNEL 𝚃𝙾 𝚄𝚂𝙴 𝙼𝙴🔐</i>",
                     reply_markup=InlineKeyboardMarkup(
                         [
@@ -112,7 +112,7 @@ async def start(b, m):
                 return
         await StreamBot.send_photo(
             chat_id=m.chat.id,
-            photo ="https://user-images.githubusercontent.com/88939380/137127129-a86fc939-2931-4c66-b6f6-b57711a9eab7.png",
+            photo ="https://telegra.ph/file/ebab36e43c1c7b4246322.jpg",
             caption ="""Oii! I am Telegram File to Link Generator Bot with Channel Support 🦋.
 Send me any file and get a direct download link and streamable link.!
 
@@ -137,7 +137,7 @@ Send me any file and get a direct download link and streamable link.!
             except UserNotParticipant:
                 await StreamBot.send_photo(
                     chat_id=m.chat.id,
-                    photo="https://i.ibb.co/ys3Tgpk/mtzijuhd-0.png",
+                    photo="https://telegra.ph/file/ebab36e43c1c7b4246322.jpg",
                     caption="**Pʟᴇᴀsᴇ Jᴏɪɴ  Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ ᴛᴏ ᴜsᴇ ᴛʜɪs Bᴏᴛ**!\n\n**Dᴜᴇ ᴛᴏ Oᴠᴇʀʟᴏᴀᴅ, Oɴʟʏ Cʜᴀɴɴᴇʟ Sᴜʙsᴄʀɪʙᴇʀs ᴄᴀɴ ᴜsᴇ ᴛʜᴇ Bᴏᴛ**!",
                     reply_markup=InlineKeyboardMarkup(
                         [
@@ -239,7 +239,7 @@ async def help_handler(bot, message):
         except UserNotParticipant:
             await StreamBot.send_photo(
                 chat_id=message.chat.id,
-                photo="https://i.ibb.co/ys3Tgpk/mtzijuhd-0.png",
+                photo="https://telegra.ph/file/ebab36e43c1c7b4246322.jpg",
                 Caption="**𝙹𝙾𝙸𝙽 𝚂𝚄𝙿𝙿𝙾𝚁𝚃 𝙶𝚁𝙾𝚄𝙿 𝚃𝙾 𝚄𝚂𝙴 ᴛʜɪs Bᴏᴛ!**\n\n__Dᴜᴇ ᴛᴏ Oᴠᴇʀʟᴏᴀᴅ, Oɴʟʏ Cʜᴀɴɴᴇʟ Sᴜʙsᴄʀɪʙᴇʀs ᴄᴀɴ ᴜsᴇ ᴛʜᴇ Bᴏᴛ!__",
                 reply_markup=InlineKeyboardMarkup(
                     [
