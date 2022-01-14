@@ -1,4 +1,4 @@
-# (c) Code-X-Mania 
+# (c) Updates : @DcStreambot
 from Code_X_Mania.bot import StreamBot
 from Code_X_Mania.vars import Var
 import logging
@@ -16,10 +16,9 @@ from pyrogram.types import ReplyKeyboardMarkup
 
 buttonz=ReplyKeyboardMarkup(
             [
-                ["START","HELP"],
-                ["LOGIN","DC"],
-                ["FOLLOW","PING"],
-                ["STATUS","MAINTAINERS"]
+                ["START","HELP","LOGIN"],
+                ["DC","FOLLOW","PING"],
+                ["STATUS","MAINTAINERS","PASSWORD"]
                         
             ],
             resize_keyboard=True
@@ -48,6 +47,26 @@ async def follow_user(b,m):
                     ),
                     parse_mode="markdown",
                     disable_web_page_preview=True)
+
+@StreamBot.on_message(filters.regex("PASSWORD"))
+async def follow_user(b,m):
+    try:
+       await b.send_message(chat_id=m.chat.id,text="HELLO",quote=True)
+    except Exception:
+                await b.send_message(
+                    chat_id=m.chat.id,
+                    text="<B>HERE'S THE PASSWORD 😳</B>",
+                    
+                    reply_markup=InlineKeyboardMarkup(
+                        [
+                            [
+                                InlineKeyboardButton("Click Here to Get Password", url=f"https://t.me/Dcstreambot/50")
+                            ]
+                        ]
+                    ),
+                    parse_mode="HTML",
+                    disable_web_page_preview=True)
+
             
          
 @StreamBot.on_message(filters.regex("FOLLOW"))
