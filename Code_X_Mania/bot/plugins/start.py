@@ -16,7 +16,7 @@ from pyrogram.types import ReplyKeyboardMarkup
 
 buttonz=ReplyKeyboardMarkup(
             [
-                ["START","HELP","LOGIN","DC"],
+                ["START","HELP","LOGIN","dc"],
                 ["FOLLOW","PING","STATUS","MAINTAINERS"]
                         
             ],
